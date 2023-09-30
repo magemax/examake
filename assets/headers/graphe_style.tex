@@ -1,0 +1,15 @@
+%Faire figurer correctement un graphe stylé.
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\pgfplotsset{
+    every tick/.append style={color=black},
+    after end axis/.append code={
+        \pgfplotsset{
+            axis line style=opaque,
+            grid=none
+        }
+    },
+} % applies to major and minor ticks,
+
+%End Faire figurer correctement un graphe stylé.

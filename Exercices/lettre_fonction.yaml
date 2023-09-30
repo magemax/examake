@@ -1,0 +1,13 @@
+nom: La lettre des fonctions
+id: lettre_fonction
+tags:
+  - fonction
+  - vocabulaire
+headers_needed:
+  - fontenc
+  - frenchcursive 
+  - correction
+body: 
+  script: lalettre.py
+  arguments: 
+    template: assets/body_parts/exo_lettre.tex

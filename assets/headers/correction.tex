@@ -1,0 +1,34 @@
+\usepackage{ifthen}
+
+\newboolean{correction}
+\setboolean{correction}{false}
+
+\newcommand{\Texteoulongueur}[2]{%
+  \ifthenelse{\boolean{correction}}%
+  {% Si la correction est activée
+    #1% Affiche le texte personnalisé
+  }%
+  {% Si la correction est désactivée
+    \rule[0.0ex]{#2 cm}{0.55pt}% Affiche des pointillés de longueur spécifiée
+  }%
+}
+
+\newcommand{\Texteouvide}[1]{%
+  \ifthenelse{\boolean{correction}}%
+  {% Si la correction est activée
+    #1% Affiche le texte personnalisé
+  }%
+  {% Si la correction est désactivée
+    % Affiche des pointillés de longueur spécifiée
+  }%
+}
+
+\newcommand{\Sicorrection}[2]{%
+  \ifthenelse{\boolean{correction}}%
+  {
+    #1
+  }
+  {
+    #2
+  }
+}

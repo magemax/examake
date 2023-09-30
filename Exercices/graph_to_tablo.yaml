@@ -1,0 +1,12 @@
+nom: De la représentation graphique au tableau de valeurs
+id: graph_to_tablo
+tags:
+  - fonction
+headers_needed: 
+  - correction
+  - graphe_style
+  - table_centree
+body: 
+  script: graph_to_tablo.py
+  arguments: 
+    template: assets/body_parts/exo_graphtotablo.tex
