@@ -8,6 +8,7 @@ class Exam:
         self.id=dico_from_yaml["id"]
         self.nombre_genere=dico_from_yaml["nombre_genere"]
         self.source=dico_from_yaml
+        self.base_headers=[] if "headers" not in dico_from_yaml else dico_from_yaml["headers"]
     def activate(self):
         dico_from_yaml=self.source
         self.template=load_text_file(dico_from_yaml["template_body"])
@@ -32,7 +33,7 @@ def build_interro(nom):
         raise
     interro = EXAMS[nom]
     interro.activate()
-    all_headers=set()
+    all_headers=set(interro.base_headers)
     for exo in interro.exercices:
         all_headers|=exo.headers
     txt_headers = import_headers(all_headers)

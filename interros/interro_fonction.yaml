@@ -2,11 +2,14 @@ nom: interro fonction
 id: interro_fonction
 nombre_genere: 10
 template_body: assets/template/basetemplate.tex
+headers:
+  - correction
 body_headers:
   - path: assets/body_parts/header_interro.tex
     date: 5 octobre 2023
     classe: 3e
-  - path: assets/body_parts/header_soin.tex
+    type: DST
+  - path: assets/body_parts/header_soin.tex #requires correction
 exercices:
   - lettre_fonction
   - graph_to_tablo
