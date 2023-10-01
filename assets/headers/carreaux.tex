@@ -1,0 +1,22 @@
+\usepackage{pgfplots}
+
+\newdimen\remainingheight
+\newcommand*{\calcremainingheight}{%
+    \ifdim\pagegoal=\maxdimen
+        \remainingheight\dimexpr\textheight-0.4pt\relax
+    \else
+        % edit 2: replaced -\baselineskip by -\lineskip-0.4pt
+        % edit 3: removed -\parskip
+        \remainingheight\dimexpr\pagegoal-\pagetotal-\lineskip-0.4pt\relax
+    \fi
+}
+%Grands carreaux (en fait ils sont petits)
+
+\newcommand\grandscarreaux[1]{%
+\medbreak\textcolor{gray}
+{\setlength\unitlength{5mm}
+\begin{picture}(26,#1)
+\multiput(0,0)(1,0){26}{\line(0,1){#1}}
+\put(0,0){\line(1,0){26}}
+\multiput(0,1)(0,1){#1}{\line(1,0){26}}
+\end{picture}}\smallbreak}

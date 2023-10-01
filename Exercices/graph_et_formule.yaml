@@ -1,0 +1,12 @@
+nom: Lien entre la formule et la représentation graphique, fonctions affines
+id: graph_et_formule
+tags:
+  - fonction
+headers_needed: 
+  - correction
+  - graphe_style
+  - carreaux
+body: 
+  script: graph_et_formule.py
+  arguments: 
+    template: assets/body_parts/exo_graph_et_formule.tex

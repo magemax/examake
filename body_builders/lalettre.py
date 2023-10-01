@@ -1,10 +1,6 @@
 from template_management import load_template
 
 from random import randint, sample, choice
-from scipy.interpolate import lagrange
-import numpy as np
-from numpy.polynomial.polynomial import Polynomial
-import matplotlib.pyplot as plt
 
 
 

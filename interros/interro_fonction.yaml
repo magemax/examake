@@ -1,6 +1,6 @@
 nom: interro fonction
 id: interro_fonction
-nombre_genere: 10
+nombre_genere: 1
 template_body: assets/template/basetemplate.tex
 headers:
   - correction
@@ -13,3 +13,4 @@ body_headers:
 exercices:
   - lettre_fonction
   - graph_to_tablo
+  - graph_et_formule
