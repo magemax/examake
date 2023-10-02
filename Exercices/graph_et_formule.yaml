@@ -5,7 +5,6 @@ tags:
 headers_needed: 
   - correction
   - graphe_style
-  - carreaux
 body: 
   script: graph_et_formule.py
   arguments: 
