@@ -10,25 +10,25 @@
         grid=major,xlabel style={at={(1,0.7)}, anchor=north}, ylabel style={at={(0.5,1)}, anchor=south},
         xtick={-7,-6,...,7},
         ytick={-7,-6,...,7}]
-    \addplot[blue, domain=-5:5, samples=100] {{w_A_latex}};
+    \addplot[blue, domain=-5:5, line width = 1.5pt,samples=100] {{w_A_latex}};
 \end{axis}
 \begin{axis}[xshift=4cm,width=0.3\textwidth, axis lines=middle, xmin=-4.1, xmax=4.1, ymin=-4.1, ymax=4.1, xlabel={$x$}, ylabel={$B(x)$}, 
         grid=major,xlabel style={at={(1,0.7)}, anchor=north}, ylabel style={at={(0.5,1)}, anchor=south},
         xtick={-7,-6,...,7},
         ytick={-7,-6,...,7}]
-    \addplot[red, domain=-5:5, samples=100] {{w_B_latex}};
+    \addplot[red, domain=-5:5,line width = 1.5pt, samples=100] {{w_B_latex}};
 \end{axis}
 \begin{axis}[xshift=8cm, width=0.3\textwidth, axis lines=middle, xmin=-4.1, xmax=4.1, ymin=-4.1, ymax=4.1, xlabel={$x$}, ylabel={$C(x)$}, 
         grid=major,xlabel style={at={(1,0.7)}, anchor=north}, ylabel style={at={(0.5,1)}, anchor=south},
         xtick={-7,-6,...,7},
         ytick={-7,-6,...,7}]
-    \addplot[purple, domain=-5:5, samples=100] {{w_C_latex}};
+    \addplot[purple, domain=-5:5,line width = 1.5pt, samples=100] {{w_C_latex}};
 \end{axis}
 \begin{axis}[xshift=12cm, width=0.3\textwidth, axis lines=middle, xmin=-4.1, xmax=4.1, ymin=-4.1, ymax=4.1, xlabel={$x$}, ylabel={$D(x)$}, 
         grid=major,xlabel style={at={(1,0.7)}, anchor=north}, ylabel style={at={(0.5,1)}, anchor=south},
         xtick={-7,-6,...,7},
         ytick={-7,-6,...,7}]
-    \addplot[black, domain=-5:5, samples=100] {{w_D_latex}};
+    \addplot[black, domain=-5:5, line width = 1.5pt, samples=100] {{w_D_latex}};
 \end{axis}
 \end{tikzpicture}
 \begin{enumerate}
