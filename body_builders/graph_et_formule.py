@@ -7,6 +7,24 @@ from fractions import Fraction
 def to_latex(frac):
     return f"\\frac{{{frac.numerator}}}{{{frac.denominator}}}"
 
+
+def affine_to_latex(a,b): #fonction ax+b
+    if a==0:
+        raise "Non mais faut pas déconner je suis pas l'armée du salut"
+    if abs(a)==1:
+        if a>0:
+            f="x"
+        else:
+            f="-x"
+    else:
+        f=f"{a}x"
+    if b>0:
+        f+=f"+{abs(b)}"
+    elif b<0:
+        f+=f"-{abs(b)}"
+    return f
+
+
 def generer_elements():
     a=randint(1,3)
     a*=choice([-1,1])
@@ -20,7 +38,7 @@ def generer_elements():
     
     qs=[]
     d={}
-    d["formule_1"]=f'{a}x{"+" if b>0 else ""}{b}'
+    d["formule_1"]=affine_to_latex(a,b)
     used=[formules[0]]+sample(formules[1:],3)
     shuffle(used)
     used_used=[i for i in range(len(used)) if used[i]==formules[0]]
@@ -33,12 +51,12 @@ def generer_elements():
     shuffle(restantes)
     pots=[]
     for k in range(3):
-        print(used[restantes[k]])
-        if abs(used[restantes[k]][0]-int(used[restantes[k]][0]+(0.5 if used[restantes[k]][0]>0 else -0.5)))<0.0001 and abs(used[restantes[k]][1]-int(used[restantes[k]][1]+0.5))<0.0001:
+        print(used[restantes[k]],abs(used[restantes[k]][0]-int(used[restantes[k]][0]+(0.5 if used[restantes[k]][0]>0 else -0.5))), abs(used[restantes[k]][1]-int(used[restantes[k]][1]+0.5)))
+        if abs(used[restantes[k]][0]-int(used[restantes[k]][0]+(0.5 if used[restantes[k]][0]>0 else -0.5)))<0.0001 and abs(used[restantes[k]][1]-int(used[restantes[k]][1]+(0.5 if used[restantes[k]][1]>0 else -0.5)))<0.0001:
             a=int(used[restantes[k]][0]+0.5)
             pots+=[tuple([abs(a)]+list(used[restantes[k]]))]
     
-    print(pots)
+    print(used, restantes, pots)
     pots=sorted(pots, key=lambda k:-k[0])
     a2=int(pots[0][0]+.5)
     b2=int(pots[0][1]+.5)
@@ -67,14 +85,14 @@ def generer_elements():
         if i not in used_used:
             try:
                 _,b,a=used[i]
-                if a!=int(a):
-                    a=to_latex(a)
-                else:
-                    a=int(a)
             except:
                 a,b = used[i]
             if a:
-                text=f"{'-' if a<0 else ''}{abs(a) if abs(a)!=1 else''}x{'+' if b>0 else '-' if b<0 else ''}{abs(b) if abs(b) else''}"
+                if a!=int(a):
+                    a_text=to_latex(a)
+                else:
+                    a_text=f"{'-' if a<0 else ''}{abs(a) if abs(a)!=1 else''}"
+                text=f"{a_text}x{'+' if b>0 else '-' if b<0 else ''}{abs(b) if abs(b) else''}"
             else:
                 text=f"{'' if b>0 else '-' if b<0 else ''}{abs(b) if abs(b) else''}"
             formules3+=[f"h_{kk}(x)={text}"]
