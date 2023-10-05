@@ -48,7 +48,7 @@ def load_text_file(path):
 
 import subprocess
 
-def latex_compile(tex_file, output_filename=None, output_folder=None, mode="pdflatex"):
+def latex_compile(tex_file, output_filename=None, output_folder=None, mode="rubber"):
     if mode=="pdflatex":
         command=["pdflatex"]
         command+=[tex_file]

@@ -25,7 +25,7 @@ def random_texte(p=0):#Avec les mots à remplacer
         l1_texte = r"""Une fonction est un objet mathématique qui prend un nombre entrée et le transforme en un nombre de sortie. 
         """ + "\n\n" + choice([r"""Par exemple, si une fonction $f$ prend {w_ant} en entrée et renvoie {w_img} en sortie, 
         on le note $f({w_ant_h}) = {w_img_h}$ (Et on prononce {w_prononciation}).""",
-            r"""Par exemple, si on a $f({w_ant_h}) = {w_img_h}$  (on prononce {w_prononciation}), 
+            r"""Par exemple, si on a $f({w_ant}) = {w_img}$ (on prononce {w_prononciation}), 
             cela veut dire qu'une fonction $f$ renvoie le nombre {w_img_h} quand on lui donne en entrée le nombre {w_ant_h}.""",
             ]) + "\n\n"+ choice([r"""On dit que {w_ant} est l'{w_ant_mot} de {w_img} par $f$,  et {w_img} l'{w_img_mot} de {w_ant} par $f$. """,
              r"""On appelle {w_img} l'{w_img_mot} de {w_ant} par la fonction f,  et {w_ant} l'{w_ant_mot} de {w_img} par f. """]) + choice(

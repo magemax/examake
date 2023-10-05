@@ -1,13 +1,13 @@
 nom: interro fonction
 id: interro_fonction
-nombre_genere: 1
+nombre_genere: 30
 template_body: assets/template/basetemplate.tex
 headers:
   - correction
 body_headers:
   - path: assets/body_parts/header_interro.tex
     date: 5 octobre 2023
-    classe: 3e
+    classe: 3D
     type: DST
   - path: assets/body_parts/header_soin.tex #requires correction
 exercices:
