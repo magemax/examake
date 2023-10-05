@@ -1,0 +1,48 @@
+\begin{exo}[Graphique et formule] 
+    On donne les représentations graphiques de quatre fonctions différentes A, B, C et D :
+
+\end{exo}
+
+\vspace{0.5cm}
+\begin{tikzpicture}[scale=1]
+% Repère 1
+\begin{axis}[width=0.3\textwidth, axis lines=middle, xmin=-4.1, xmax=4.1, ymin=-4.5, ymax=4.1, xlabel={$x$}, ylabel={$A(x)$}, 
+        grid=major,xlabel style={at={(1,0.7)}, anchor=north}, ylabel style={at={(0.5,1)}, anchor=south},
+        xtick={-7,-6,...,7},
+        ytick={-7,-6,...,7}]
+    \addplot[blue, domain=-5:5, line width = 1.5pt,samples=100] {{w_A_latex}};
+\end{axis}
+\begin{axis}[xshift=4cm,width=0.3\textwidth, axis lines=middle, xmin=-4.1, xmax=4.1, ymin=-4.1, ymax=4.1, xlabel={$x$}, ylabel={$B(x)$}, 
+        grid=major,xlabel style={at={(1,0.7)}, anchor=north}, ylabel style={at={(0.5,1)}, anchor=south},
+        xtick={-7,-6,...,7},
+        ytick={-7,-6,...,7}]
+    \addplot[red, domain=-5:5,line width = 1.5pt, samples=100] {{w_B_latex}};
+\end{axis}
+\begin{axis}[xshift=8cm, width=0.3\textwidth, axis lines=middle, xmin=-4.1, xmax=4.1, ymin=-4.1, ymax=4.1, xlabel={$x$}, ylabel={$C(x)$}, 
+        grid=major,xlabel style={at={(1,0.7)}, anchor=north}, ylabel style={at={(0.5,1)}, anchor=south},
+        xtick={-7,-6,...,7},
+        ytick={-7,-6,...,7}]
+    \addplot[purple, domain=-5:5,line width = 1.5pt, samples=100] {{w_C_latex}};
+\end{axis}
+\begin{axis}[xshift=12cm, width=0.3\textwidth, axis lines=middle, xmin=-4.1, xmax=4.1, ymin=-4.1, ymax=4.1, xlabel={$x$}, ylabel={$D(x)$}, 
+        grid=major,xlabel style={at={(1,0.7)}, anchor=north}, ylabel style={at={(0.5,1)}, anchor=south},
+        xtick={-7,-6,...,7},
+        ytick={-7,-6,...,7}]
+    \addplot[black, domain=-5:5, line width = 1.5pt, samples=100] {{w_D_latex}};
+\end{axis}
+\end{tikzpicture}
+\begin{enumerate}
+    \item Parmi les "courbes" ci-dessus, laquelle pourrait représenter la fonction  $f$ définie par $f(x)={w_formule_1}$ ? Répondez ci-dessous en \textbf{expliquant votre raisonnement.}
+    \item Dans cette question, on considère le progrmme de calcul suivant :
+            \begin{itemize}
+                {w_etapes_programme}
+            \end{itemize}
+        \begin{enumerate}
+            \item Donnez le résultat du programme quand le nombre entré est {w_prog_nombre_entre}
+            \item Sachant que l'une des courbes ci-dessus représente la fonction $g$ définie par le programme de calcul. Laquelle pourrait lui correspondre? 
+            \item Donnez la formule développée et réduite de $g(x)$ en fonction de x.
+        \end{enumerate}
+    \item parmi les formules ci-dessous, laquelle (ou lesquelles) pourraient être celles d'une des fonctions représentées. Pourquoi ? 
+        
+    \[ {w_formules_3} \]
+\end{enumerate}

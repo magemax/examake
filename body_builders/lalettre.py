@@ -1,10 +1,6 @@
 from template_management import load_template
 
 from random import randint, sample, choice
-from scipy.interpolate import lagrange
-import numpy as np
-from numpy.polynomial.polynomial import Polynomial
-import matplotlib.pyplot as plt
 
 
 
@@ -12,20 +8,20 @@ import matplotlib.pyplot as plt
 
 def random_texte(p=0):#Avec les mots à remplacer
     if p==0:
-        l1_intro = "Vous écrivez une lettre à votre tante, qui se remet d'une rage de dents. Complétez les mots que vous avez oubliés"
+        l1_intro = "Vous écrivez une lettre à votre tante, qui se remet d'une rage de dents. Complétez les mots que vous avez oubliés."
         l1_texte = r"""\frenchcursive{ Très chère Tante, j'ai bien terminé mon premier mois de 3ème au collège Paul Bert ! En mathématiques, nous avons vu les fonctions.
         Une fonction est une machine qui transforme un nombre en un autre. 
         """ + "\n\n" + choice([r"""Par exemple, si une fonction qui s'appelle $f$ transforme {w_ant} en {w_img}, 
         alors on note que  $f({w_ant_h}) = {w_img_h}$ (En fait, on prononce {w_prononciation}).""",
-            r"""Par exemple, si on a $f({w_ant_h}) = {w_img_h}$  (on prononce {w_prononciation}), cela veut dire qu'une fonction qui s'appelle $f$ prend le nombre {w_ant_h} et renvoie le nombre {w_img_h}.""",
-            ]) + "\n\n"+ choice([r"""On dit aussi que {w_ant} est l'{w_ant_mot} de {w_img} par f,  et {w_img} l'{w_img_mot} de {w_ant}. """, r"""On dit aussi que {w_img} est l'{w_img_mot} de {w_ant} par f,  et {w_ant} l'{w_ant_mot} de {w_img}. """]) + choice(
+            r"""Par exemple, si on a $f({w_ant}) = {w_img}$  (on prononce {w_prononciation}), cela veut dire qu'une fonction qui s'appelle $f$ prend le nombre {w_ant_h} et renvoie le nombre {w_img_h}.""",
+            ]) + "\n\n"+ choice([r"""On dit aussi que {w_ant} est l'{w_ant_mot} de {w_img} par la fonction $f$,  et {w_img} l'{w_img_mot} de {w_ant}. """, r"""On dit aussi que {w_img} est l'{w_img_mot} de {w_ant} par f,  et {w_ant} l'{w_ant_mot} de {w_img}. """]) + choice(
                 [r"""Ah, j'oubliais, on peut aussi les dessiner : puisque {w_img} est l'{w_img_mot} de {w_ant}, alors on dessinera sur la courbe le point $A({w_ant_h};{w_img_h})$ : 
         Quand je regarde le graphe, je peux lire la valeur d'entrée dans la fonction sur l'axe des {w_abs_mot}, et sa valeur de sortie sur l'axe des {w_ord_mot}""",
             r"""Ah, j'oubliais, on peut aussi les dessiner : puisque {w_ant} est l'{w_ant_mot} de {w_img}, alors on dessinera sur la courbe le point $A({w_ant_h};{w_img_h})$. 
             Quand je regarde le graphe, je peux lire la valeur d'entrée dans la fonction sur l'axe des {w_abs_mot}, et sa valeur de sortie sur l'axe des {w_ord_mot}"""
         ]) + """\n\nJ'espère que toi et tes dents allez mieux !""" + "}"
     if p==1:
-        l1_intro = "Complétez le texte ci-dessous avec le vocabulaire et les notations des fonctions"
+        l1_intro = "Complétez le texte ci-dessous avec le vocabulaire et les notations des fonctions."
         l1_texte = r"""Une fonction est un objet mathématique qui prend un nombre entrée et le transforme en un nombre de sortie. 
         """ + "\n\n" + choice([r"""Par exemple, si une fonction $f$ prend {w_ant} en entrée et renvoie {w_img} en sortie, 
         on le note $f({w_ant_h}) = {w_img_h}$ (Et on prononce {w_prononciation}).""",

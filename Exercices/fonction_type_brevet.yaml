@@ -1,0 +1,10 @@
+nom: Lien entre la formule et la représentation graphique, fonctions affines
+id: fonction_type_brevet
+tags:
+  - fonction
+headers_needed: 
+  - correction
+body: 
+  script: fonction_type_brevet.py
+  arguments: 
+    template: assets/body_parts/exo_fonction_type_brevet.tex

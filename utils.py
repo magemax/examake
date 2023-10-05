@@ -64,7 +64,7 @@ def latex_compile(tex_file, output_filename=None, output_folder=None, mode="pdfl
         if output_folder is not None:
             command+=[f"--into {output_folder}"]
         if output_filename is not None:
-            command+=[f"--jobname {output_filename}"]
+            command+=[f"--jobname {output_filename[:-4]}"]
         command+=[tex_file]
 
         print("Command to run", " ".join(command))
