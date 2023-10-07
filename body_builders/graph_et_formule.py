@@ -52,12 +52,12 @@ def generer_elements():
     numero_reponse_1 = "ABCD"[min([k for k in range(len(used)) if used[k]==(a,b)])]
     d["rep_1"]=numero_reponse_1
     d["f0"]=b
-    if (a>0):
-        d["autreval"]=-1
-        d["fav"]=b-a
-    else:
+    if abs(b+a)<=4:
         d["autreval"]=1
         d["fav"]=b+a
+    else:
+        d["autreval"]=-1
+        d["fav"]=b-a
         
     numero_reponse_2 = "ABCD"[min([k for k in range(len(used)) if used[k]==(aa,bb)])]
     d["rep_2"]=numero_reponse_2
@@ -84,9 +84,9 @@ def generer_elements():
         instructions+=[f"Lui {'ajouter' if fact>0 else 'soustraire'} {abs(fact)}"]
         formx=f"({formx}{'+' if fact>=0 else ''}{fact})"
         instructions+=[f"Multiplier le résultat par {aa}"]
-        formx=f"({aa} \times {formx})"
+        formx=f"({aa} \\times {formx})"
         instructions+=[f"{'Ajouter' if prod-bb<0 else 'Soustraire'} {abs(prod-bb)} au résultat "]
-        formx=f"({formx}{'+' if fact>=0 else ''}{bb-prod})"
+        formx=f"({formx}{'+' if bb-prod>=0 else ''}{bb-prod})"
     
     instructions+["Dire le nombre obtenu"]
     d["etapes_programme"] = "\\item " +  "\n \\item ".join(instructions)
@@ -111,7 +111,7 @@ def generer_elements():
                 text=f"{a_text}x{'+' if b>0 else '-' if b<0 else ''}{abs(b) if abs(b) else''}"
             else:
                 text=f"{'' if b>0 else '-' if b<0 else ''}{abs(b) if abs(b) else''}"
-            formules3+=[f" {text}"]
+            formules3+=[f"{text}"]
             kk+=1
     unused= sample([k for k in formules if k not in used],2)
 
@@ -135,7 +135,7 @@ def generer_elements():
 
     #Troisième boucle pour dire quel élément de formules3 correspond à quel graphique utilisé
 
-corresp=[]
+    corresp=[]
     for i in range(len(used)):
         if i not in used_used:
             try:
@@ -146,15 +146,14 @@ corresp=[]
                 if a!=int(a):
                     a_text=to_latex(a)
                 else:
-                    a_text=f"{'-' if a<0 else ''}{abs(a) if abs(a)!=1 else''}"
+                    a_text=f"{'-' if a<0 else ''}{abs(a) if abs(a)!=1 else ''}"
                 text=f"{a_text}x{'+' if b>0 else '-' if b<0 else ''}{abs(b) if abs(b) else''}"
             else:
                 text=f"{'' if b>0 else '-' if b<0 else ''}{abs(b) if abs(b) else''}"
-        for j in range(len(formules3)):
-            if text==formules3[j]:
-                corresp+=[("ABCD"[i],f"$h_{j+1}$")]
-    d["reponse_4"]=r"\item".join([""] + [k[1]+'correspond à la courbe' + k[0])
-
+            for j in range(len(formules3)):
+                if text==formules3[j]:
+                    corresp+=[("ABCD"[i],f"$h_{j+1}$")]
+    d["reponse_4"]=" \n \\item ".join([""] + [k[1]+' correspond à la courbe ' + k[0] for k in corresp])
     formules3=[f"h_{k+1}(x)="+formules3[k] for k in range(len(formules3))]
     d["formules_3"]= r" \qquad ".join(formules3)
     return d
