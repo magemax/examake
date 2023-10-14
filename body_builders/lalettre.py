@@ -22,16 +22,16 @@ def random_texte(p=0):#Avec les mots à remplacer
         ]) + """\n\nJ'espère que toi et tes dents allez mieux !""" + "}"
     if p==1:
         l1_intro = "Complétez le texte ci-dessous avec le vocabulaire et les notations des fonctions."
-        l1_texte = r"""Une fonction est un objet mathématique qui prend un nombre entrée et le transforme en un nombre de sortie. 
+        l1_texte = r"""Une fonction est un objet mathématique qui prend un nombre en entrée et le transforme en un nombre de sortie. 
         """ + "\n\n" + choice([r"""Par exemple, si une fonction $f$ prend {w_ant} en entrée et renvoie {w_img} en sortie, 
         on le note $f({w_ant_h}) = {w_img_h}$ (Et on prononce {w_prononciation}).""",
-            r"""Par exemple, si on a $f({w_ant_h}) = {w_img_h}$  (on prononce {w_prononciation}), 
+            r"""Par exemple, si on a $f({w_ant}) = {w_img}$ (on prononce {w_prononciation}), 
             cela veut dire qu'une fonction $f$ renvoie le nombre {w_img_h} quand on lui donne en entrée le nombre {w_ant_h}.""",
             ]) + "\n\n"+ choice([r"""On dit que {w_ant} est l'{w_ant_mot} de {w_img} par $f$,  et {w_img} l'{w_img_mot} de {w_ant} par $f$. """,
              r"""On appelle {w_img} l'{w_img_mot} de {w_ant} par la fonction f,  et {w_ant} l'{w_ant_mot} de {w_img} par f. """]) + choice(
-                [r"""On présente parfois des valeurs prises par une fonction dans un tableau de valeur. Dans notre exemple, comme {w_img} est l'{w_img_mot} de {w_ant}, on écrit dans une colonne le nombre {w_ant_h} sur la première ligne du tableau, 
+                [r"""On présente parfois des valeurs prises par une fonction dans un tableau de valeurs. Dans notre exemple, comme {w_img} est l'{w_img_mot} de {w_ant}, on écrit dans une colonne le nombre {w_ant_h} sur la première ligne du tableau, 
                 et {w_img_h} sur la deuxième ligne. """,
-                r"""On présente parfois des valeurs prises par une fonction dans un tableau de valeur. Dans notre exemple, comme {w_ant} est l'{w_ant_mot} de {w_img}, on écrit dans une colonne le nombre {w_ant_h} sur la première ligne du tableau, 
+                r"""On présente parfois des valeurs prises par une fonction dans un tableau de valeurs. Dans notre exemple, comme {w_ant} est l'{w_ant_mot} de {w_img}, on écrit dans une colonne le nombre {w_ant_h} sur la première ligne du tableau, 
                 et {w_img_h} sur la deuxième ligne. """,])
     if p==2:
         l1_intro = "Votre petite cousine a du mal à dormir, et vous lui racontez une histoire sur les fonctions. Complétez les parties manquantes du texte sans erreur."
