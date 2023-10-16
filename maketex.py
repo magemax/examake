@@ -4,16 +4,16 @@ from interro_builder import build_interro
 import os
 from datetime import datetime
 
-interro_name="interro_function"
+interro_name="dm_fonction"
 import random
 
 
-random.seed(10)
+random.seed(13)
 
-filename=f'{datetime.now().strftime("%Y%m%dT%H%M%S")}_interro_fonction'
+filename=f'{datetime.now().strftime("%Y%m%dT%H%M%S")}_' + interro_name
 pathname=f"Outputs/{filename}/"
 
-contenu=build_interro("interro_fonction")
+contenu=build_interro(interro_name)
 if not os.path.exists(pathname):
     os.mkdir(pathname)
 
