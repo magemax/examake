@@ -1,0 +1,17 @@
+nom: interro fonction, version DM
+id: dm_fonction
+nombre_genere: 15
+template_body: assets/template/basetemplate.tex
+headers:
+  - correction
+body_headers:
+  - path: assets/body_parts/header_interro.tex
+    date: 16 octobre 2023
+    classe: 3B
+    type: Devoir Maison
+  - path: assets/body_parts/header_soin.tex #requires correction
+exercices:
+  - lettre_fonction
+  - graph_to_tablo
+  - graph_et_formule
+  - fonction_type_brevet

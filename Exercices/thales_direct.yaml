@@ -1,0 +1,10 @@
+nom: Thalès sens direct
+id: thales_direct
+tags:
+  - Thalès
+headers_needed:
+  - correction
+body: 
+  script: thales_normal.py
+  arguments: 
+    template: assets/body_parts/exo_thales.tex
