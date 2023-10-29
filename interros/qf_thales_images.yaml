@@ -1,0 +1,13 @@
+nom: Exercices préparés - Thalès
+id: qf_thales_images
+nombre_genere: 5
+template_body: assets/template/basetemplate.tex
+headers:
+  - correction
+body_headers:
+  - path: assets/body_parts/header_interro.tex
+    date: 6/8 novembre 2023
+    classe: 3B/3D
+    type: Exercice préparé
+exercices:
+  - thales_images
