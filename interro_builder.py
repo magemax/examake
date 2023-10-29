@@ -16,9 +16,11 @@ class Exam:
         self.exercices= [gen_exercice(k) for k in dico_from_yaml["exercices"]]
 
 dossier_interros = "./interros"  # Remplacez cela par le chemin de votre dossier
-print("Loading Exercices list")
+print("Loading Interro list")
 EXAMS = {interro["id"]: Exam(interro) for interro in charger_fichiers_yaml(dossier_interros)}
 
+for k in EXAMS:
+    print(k)
 
 def import_headers(hds):
     headers=[]

@@ -24,9 +24,11 @@ def wherenodefromangle(angles):
     return "below left"
     
 
+    
 
 def generer_elements(typ=0): #typ=0 pour direct, sinon 1
     d={}
+    isparallel=choice([True, False])
     point_intersection=(0,0)
     angle_1=random()*pi
     angle_2=(angle_1+(pi/6) + random()*(pi-pi/3))%pi
@@ -39,16 +41,24 @@ def generer_elements(typ=0): #typ=0 pour direct, sinon 1
         ratio=Decimal(choice([_ for _ in range(6,20) if _!=10]))
         ratio2=Decimal(choice([-1,1])*choice([_ for _ in range(5,26) if _!=10]))
     
+    nameordos=[]
+    if ratio2>10:
+        nameordos=["OAM","OBN"]
+    elif ratio2>0:
+        nameordos=["OMA","ONB"]
+    elif ratio2<0:
+        nameordos=["AOM","BON"]
+
     distbase=Decimal(choice([k for k in range(2,19) if k != 10]))
     ratio/=10
     ratio2/=10
     ld=["OA","OB","OM","ON"]
     #Attention, cotes est ptet neg.
-    cotes=[distbase,distbase*ratio, distbase*ratio2, distbase*ratio*ratio2]
+    cotes=[distbase,distbase*ratio, distbase*ratio2, distbase*ratio*ratio2+ Decimal("0" if isparallel else "0.1")]
     cotes=[k.normalize() if (k%10)!=0 else (k+Decimal(1)).normalize()-1 for k in cotes]
     scale= (8+random()) / float(max([abs(i) for i in cotes]))
     dists=dict(zip(ld, cotes))
-    
+
     picture_elements=[]
 
     coords={}
@@ -70,15 +80,18 @@ def generer_elements(typ=0): #typ=0 pour direct, sinon 1
     for name in ld+["AB","MN", "AM","BN"]:
         dnames[name]=dnames[name[0]]+dnames[name[1]]
 
+    for name in nameordos:
+        dnames[name]=dnames[name[0]]+dnames[name[1]]+dnames[name[2]]
+
     #Distances 
     distancestext=[]
-    for k in ld[:-1]:
+    for k in ld[:]:
         distancestext+=[f"{dnames[k]} = {dec_to_latex(abs(dists[k]))} cm"]
 
     donnees_dists = " ; ".join(distancestext) 
 
-    question=f"Calculer la longueur {dnames[ld[-1]]}"
-    
+    question=f"Les droites ({dnames['AB']}) et ({dnames['MN']}) sont-elles parallèles ? "
+
 
 
     #placement des noms de points:
@@ -123,17 +136,19 @@ def generer_elements(typ=0): #typ=0 pour direct, sinon 1
     d["question"] = question
 
     corrtable = []
-    print(dnames)
     corrtable+=[f"Les droites ({dnames['AM']}) et ({dnames['BN']}) sont sécantes en {dnames['O']}."]
-    corrtable+=[f"Les droites ({dnames['AB']}) et ({dnames['MN']}) sont parallèles."]
-    corrtable+=[f"D'après le théorème de Thalès, l'égalité  $\\frac{{{dnames['ON']}}}{{{dnames['OB']}}}=\\frac{{{dnames['OM']}}}{{{dnames['OA']}}}$ est donc vraie."]
-    corrtable+=[f"En remplaçant par leur valeurs les longueurs connues, on obtient  $\\frac{{{dnames['ON']}}}{{{dec_to_latex(abs(dists['OB']))}}}=\\frac{{{dec_to_latex(abs(dists['OM']))}}}{{{dec_to_latex(abs(dists['OA']))}}}$."]
-    corrtable+=[f"On en déduit ${dnames['ON']}=\\frac{{{dec_to_latex(abs(dists['OB']))} \\times {dec_to_latex(abs(dists['OM']))}}}{{{dec_to_latex(abs(dists['OA']))}}}={dec_to_latex(abs(dists['ON']))}$"]
-    corrtable+=[f"La longueur du segment [{dnames['ON']}] est donc de {dec_to_latex(abs(dists['ON']))} centimètres."]
+    corrtable+=[f"Les points {','.join(dnames[nameordos[0]])} et {','.join(dnames[nameordos[1]])} sont alignés dans cet ordre."]
+    if isparallel:   
+        corrtable+=[f"On remarque que $\\frac{{{dec_to_latex(abs(dists['ON']))}}}{{{dec_to_latex(abs(dists['OB']))}}}=\\frac{{{dec_to_latex(abs(dists['OM']))}}}{{{dec_to_latex(abs(dists['OA']))}}}$ (Par exemple en vérifiant que ${dec_to_latex(abs(dists['ON']))} \\times {dec_to_latex(abs(dists['OA']))}={dec_to_latex(abs(dists['OM']))} \\times {dec_to_latex(abs(dists['OB']))}$)."]
+        corrtable+=[f"l'égalité  $\\frac{{{dnames['ON']}}}{{{dnames['OB']}}}=\\frac{{{dnames['OM']}}}{{{dnames['OA']}}}$ est donc vraie."]
+        corrtable+=[f"D'après la réciproque du théorème de Thalès, les droites ({dnames['AB']}) et ({dnames['MN']}) sont donc parallèles"]
+    else:
+        corrtable+=[f"On remarque que $\\frac{{{dec_to_latex(abs(dists['ON']))}}}{{{dec_to_latex(abs(dists['OB']))}}} \\neq \\frac{{{dec_to_latex(abs(dists['OM']))}}}{{{dec_to_latex(abs(dists['OA']))}}}$ (Par exemple en vérifiant que ${dec_to_latex(abs(dists['ON']))} \\times {dec_to_latex(abs(dists['OA']))}={dec_to_latex(abs(dists['OM']))} \\times {dec_to_latex(abs(dists['OB']))}$)."]
+        corrtable+=[f"l'égalité  $\\frac{{{dnames['ON']}}}{{{dnames['OB']}}}=\\frac{{{dnames['OM']}}}{{{dnames['OA']}}}$ est donc \\textbf{{fausse}}."]
+        corrtable+=[f"D'après la contraposée du théorème de Thalès, les droites ({dnames['AB']}) et ({dnames['MN']}) ne sont donc pas parallèles"]
+        
     d["full_corrige"] = "\n\n".join(corrtable)    
-    d["predistances_donnees"]="""Dans le dessin suivant, les droites représentées en pointillés sont parallèles.
-
-    On donne les mesures suivantes : """
+    d["predistances_donnees"]="""Dans le dessin représenté ci-dessous, on donne les mesures suivantes : """
     return d
 
 def build(**args): 

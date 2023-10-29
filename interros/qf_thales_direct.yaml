@@ -1,13 +1,13 @@
-nom: Exercice flash - Thalès
-id: qf_thales_indirect
-nombre_genere: 30
+nom: Exercice flash - Thalès - Direct
+id: qf_thales_direct
+nombre_genere: 5
 template_body: assets/template/basetemplate.tex
 headers:
   - correction
 body_headers:
   - path: assets/body_parts/header_interro.tex
-    date: 16 octobre 2023
+    date: 18 octobre 2023
     classe: 3B
     type: Entraînement aux questions flash
 exercices:
-  - thales_indirect
+  - thales_direct
