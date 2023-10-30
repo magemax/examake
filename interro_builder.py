@@ -13,6 +13,7 @@ class Exam:
         dico_from_yaml=self.source
         self.template=load_text_file(dico_from_yaml["template_body"])
         self.body_headers=[gen_body_header(h) for h in dico_from_yaml["body_headers"]]
+        self.body_footers=[gen_body_header(h) for h in dico_from_yaml["body_footers"]] if "body_footers" in dico_from_yaml else []
         self.exercices= [gen_exercice(k) for k in dico_from_yaml["exercices"]]
 
 dossier_interros = "./interros"  # Remplacez cela par le chemin de votre dossier
@@ -53,6 +54,7 @@ def build_interro(nom):
         txt=interro.body_headers[:]
         for k in interro.exercices:
             txt+=[k.build()]
+        txt+=interro.body_footers[:]
         fichiers+=["\n\\vspace{0.5 cm}\n".join(txt)]
     main_file= main_file.replace("{w_body}", "\n\n \\newpage \n\n".join(fichiers))
     return main_file

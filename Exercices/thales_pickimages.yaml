@@ -1,0 +1,10 @@
+nom: Thalès from images
+id: thales_images
+tags:
+  - Thalès
+headers_needed:
+  - includegraphs
+body: 
+  script: thales_pickimages.py
+  arguments: 
+    template: assets/body_parts/exo_thales_images.tex

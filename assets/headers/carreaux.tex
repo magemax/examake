@@ -1,5 +1,4 @@
-\usepackage{pgfplots}
-
+%Faire rectangle jusqu'à la fin de la page 
 \newdimen\remainingheight
 \newcommand*{\calcremainingheight}{%
     \ifdim\pagegoal=\maxdimen
@@ -10,13 +9,59 @@
         \remainingheight\dimexpr\pagegoal-\pagetotal-\lineskip-0.4pt\relax
     \fi
 }
-%Grands carreaux (en fait ils sont petits)
+%Grands carreaux 
 
-\newcommand\grandscarreaux[1]{%
-\medbreak\textcolor{gray}
-{\setlength\unitlength{5mm}
-\begin{picture}(26,#1)
-\multiput(0,0)(1,0){26}{\line(0,1){#1}}
-\put(0,0){\line(1,0){26}}
-\multiput(0,1)(0,1){#1}{\line(1,0){26}}
-\end{picture}}\smallbreak}
+\tikzset{
+lignes fines/.style={draw=gray!50!white,very thin},
+lignes epaisses/.style={draw=gray!50!white,thick},
+}
+\newcommand\petitscarreaux[2]{%
+\begin{tikzpicture}[inner sep=0,outer sep=0]
+\pgfmathsetmacro\mywidth{#1}
+\pgfmathsetmacro\myheight{#2}
+
+\pgfmathsetmacro\incx{5mm}
+\pgfmathsetmacro\incy{5mm}
+
+\pgfmathsetmacro\numx{int(\mywidth/\incx)}
+\foreach \x in {0,...,\numx}{
+\draw[lignes fines]
+(\x * \incx pt,0) -- (\x * \incx pt,\myheight pt);
+}
+
+\pgfmathsetmacro\numy{int(\myheight/\incy)}
+\foreach \y in {0,...,\numy}{
+\draw[lignes fines]
+(0,\y * \incy pt) -- (\mywidth pt,\y * \incy pt);
+}
+\end{tikzpicture}%
+}
+
+\newcommand\grandscarreaux[2]{%
+\begin{tikzpicture}[inner sep=0,outer sep=0]
+\pgfmathsetmacro\mywidth{#1}
+\pgfmathsetmacro\myheight{#2}
+
+\pgfmathsetmacro\incx{8mm}
+\pgfmathsetmacro\incypetits{2mm}
+\pgfmathsetmacro\incygrands{8mm}
+
+\pgfmathsetmacro\numx{int(\mywidth/\incx)}
+\foreach \x in {0,...,\numx}{
+\draw[lignes fines]
+(\x * \incx pt,0) -- (\x * \incx pt,\myheight pt);
+}
+
+\pgfmathsetmacro\numy{int(\myheight/\incypetits)}
+\foreach \y in {0,...,\numy}{
+\draw[lignes fines]
+(0,\y * \incypetits pt) -- (\mywidth pt,\y * \incypetits pt);
+}
+
+\pgfmathsetmacro\numy{int(\myheight/\incygrands)}
+\foreach \y in {0,...,\numy}{
+\draw[lignes epaisses]
+(0,\y * \incygrands pt) -- (\mywidth pt,\y * \incygrands pt);
+}
+\end{tikzpicture}%
+}

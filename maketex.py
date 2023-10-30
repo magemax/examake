@@ -4,11 +4,11 @@ from interro_builder import build_interro
 import os
 from datetime import datetime
 
-interro_name="dm_fonction"
+interro_name="qf_thales_images"
 import random
 
 
-random.seed(13)
+random.seed(10)
 
 filename=f'{datetime.now().strftime("%Y%m%dT%H%M%S")}_' + interro_name
 pathname=f"Outputs/{filename}/"
