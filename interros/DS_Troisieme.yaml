@@ -1,0 +1,22 @@
+nom: Interro littéral, thales
+id: ds_troisieme_littthal
+nombre_genere: 15
+template_body: assets/template/basetemplate.tex
+headers:
+  - correction
+body_headers:
+  - path: assets/body_parts/header_interro.tex
+    date: 17 novembre 2023
+    classe: 3B/3D
+    type: DS
+  - path: assets/body_parts/header_soin.tex #requires correction
+body_footers:
+  - path: assets/body_parts/footer_carreaux.tex
+exercices:
+  - question_cours
+  - detection_premiers
+  - liste_diviseurs
+  - decomposition_premiers
+  - troisieme_developpement
+  - thales_random
+  - thales_brevet
