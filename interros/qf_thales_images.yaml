@@ -12,6 +12,7 @@ body_headers:
     type: Exercice préparé
 body_footers:
   - path: assets/body_parts/footer_carreaux.tex
-  - path: assets/body_parts/footer_page_carreaux.tex
+  - path: assets/body_parts/footer_sociogramme.tex
+  - path: assets/body_parts/footer_carreaux.tex
 exercices:
   - thales_images
