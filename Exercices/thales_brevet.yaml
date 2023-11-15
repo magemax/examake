@@ -4,7 +4,6 @@ tags:
   - Thalès
 headers_needed:
   - correction
-  - pstricks
 body: 
   script: thales_brevet.py
   arguments: 

@@ -34,19 +34,7 @@ Il est alors satisfait: sa corde d'une longueur de 30 mètres est assez longue p
 A l'aide de la figure, confirmer sa décision. 
 
 \begin{center}
-\psset{unit=1cm}
-\begin{pspicture}(10,5)
-%\psgrid
-\psline(0,2)(10,2)\psline(0,4.5)(10,4.5)
-\psline(0.5,2)(0.5,4.5)(6,0.25)(6,2)
-\rput(8,3.25){Rivière} 
-\uput[d](2,2){20~m} 
-\uput[u](4.9,2){12~m}
-\uput[r](6,1.25){15~m} 
-\rput(2.5,0.5){\small La figure n'est pas à l'échelle}
-\uput[ul](0.5,4.5){A} \uput[d](0.5,2){D}\uput[u](3.75,2){R}
-\uput[u](6,2){V} \uput[r](6,0.5){B} 
-\end{pspicture}
+\includegraphics[width=10cm,height=5cm,keepaspectratio]{../../assets/images/thales_brevet/Riviere.PNG}
 \end{center}
 """
 corrige = r"""
@@ -68,15 +56,9 @@ plus haut dans le ciel, recueille les images et joue le rôle d'une antenne rela
 On considère que les deux hélicoptères se situent à la même altitude et que le peloton  des coureurs roule sur une route horizontale. Le schéma ci-dessous illustre cette
 situation:
 
+
 \begin{center}
-\psset{unit=0.8cm}
-\begin{pspicture}(14,7)
-%\psgrid
-\psdots[dotstyle=+,dotangle=45](7,5.8)(1.8,0)(11.8,0)(3.8,2.2)(10,2.2)%AMNHJ
-\uput[u](7,5.8){A (avion)} \uput[d](1.8,0){M (moto 2)} \uput[d](11.8,0){N (moto 1)} \uput[ul](3.8,2.2){H hélicoptère 2} \uput[ur](10,2.2){L hélicoptère 1} 
-%\pspolygon(7,5.8)(1.8,0)(11.8,0)
-\psline(0,0)(14,0)
-\end{pspicture}
+\includegraphics[width=10cm,height=5cm,keepaspectratio]{../../assets/images/thales_brevet/Helico.PNG}
 \end{center}
 
 \medskip
@@ -107,9 +89,9 @@ Dans le triangle AMN :	H $\in$ [AM], L $\in$ [AN] et (LH) // (MN), donc, d'aprè
 
 $\dfrac{\text{AH}}{\text{AM}}= \dfrac{\text{AL}}{\text{AN}} = \dfrac{\text{HL}}{\text{MN}}$, 
 
-soit  $\dfrac{720}{\np{1000}}  =\dfrac{720}{\np{1000}} = \dfrac{270}{\text{MN}}$.
+soit  $\dfrac{720}{1000}  =\dfrac{720}{1000} = \dfrac{270}{\text{MN}}$.
 
-Donc MN $= \dfrac{270 \times \np{1000}}{720} = 375$~m.
+Donc MN $= \dfrac{270 \times 1000}{720} = 375$~m.
 \end{enumerate}"""
 
 LesExos+= [ExoBrevet(annee, question, corrige)]
@@ -123,42 +105,8 @@ En se retournant lors d'une marche arrière, le conducteur d'une camionnette voi
 Sur le schéma, la zone grisée correspond à ce que le conducteur ne voit pas lorsqu'il regarde en arrière. 
 
 \begin{center}
-\psset{unit=0.65cm}
-\begin{pspicture}(17,4.75)
-\pspolygon[fillstyle=solid,fillcolor=lightgray](6.35,0)(13.9,0)(6.35,2.7)%ECA
-\pscurve(0,1)(0.1,1.3)(0.3,2)(0.4,2.5)(0.75,2.7)(1,3)(1.6,4)(1.8,4.2)(2,4.3)(2.4,4.4)(5,4.3)(6,4.2)(6.2,4)(6.4,3)(6.45,2.35)(6.6,2.3)(6.5,1.6)(6.35,1.6)(6.3,1.3)(6.1,1.3)(6,1)(6,0.8)(5.85,0.8)(5.8,1)(5.7,1.3)(5.2,1.6)(5,1.6)(4.5,1.4)(4.3,1)(4.2,0.7)(3,0.65)(2.3,0.7)(2.2,1)(2,1.4)(1.5,1.6)(1,1.4)(0.8,1)(0.7,0.7)(0.3,0.7)(0,1)
-\pscurve(0.7,2.7)(1.2,2.7)(1.4,3)(1.8,4.2)
-\pscurve(1.5,2.7)(2.8,2.7)(3,2.8)(3,3.2)(3.,4.1)(2,4.1)(1.8,3.5)(1.5,2.7)
-\pscurve(3.2,2.7)(4.6,2.8)(4.6,3)(4.65,4.05)(3.3,4)(3.25,3.5)(3.2,2.7)
-\pscurve(4.8,2.7)(6,2.65)(6.2,3)(6,4)(5.1,4.1)(4.9,3.7)(4.8,2.7)
-\pscurve(0.4,2.5)(3,2.4)(6.3,2.4)
-\pscurve(0.3,2.3)(2,2.2)(6.3,2.1)
-\pscurve(1.5,0)(1,0.2)(0.85,0.5)(1,1.15)(1.5,1.45)(2.1,1)(2,0.3)(1.5,0)
-\pscurve(5.1,0)(4.6,0.2)(4.45,0.5)(4.6,1.15)(5.1,1.45)(5.7,1)(5.6,0.3)(5.1,0)
-\pscurve(1.1,0.6)(1.5,1)(1.9,0.5)(1.5,0.3)(1.1,0.6)
-\pscurve(1.3,0.7)(1.5,0.9)(1.7,0.7)(1.5,0.4)(1.3,0.7)
-\pscurve(4.8,0.7)(5,1.1)(5.4,0.6)(5,0.3)(4.8,0.7)
-\pscurve(4.9,0.7)(5.05,1)(5.25,0.7)(5,0.5)(4.9,0.7)
-\pscurve(6,0.8)(6.4,0.85)(6.75,1)(6.75,1.2)(6.3,1.3)
-\pscurve(6.4,2.4)(6.3,2)(6.3,1.6)
-\pscurve(0,1)(0.2,1.2)(0.8,1)
-\pscircle(2.5,3.6){0.4}
-\psline(2.4,3.2)(2.2,3)(1.9,2.65)
-\psline(2.6,3.2)(2.8,2.7)
-\psline(2.3,3.7)(2.4,3.6)
-\psline(2.5,3.7)(2.6,3.6)
-\psline(8.6,1.9)(8.6,0)%BD
-\psdots(8.6,1.9)(8.6,0)(6.35,0)(13.9,0)(6.35,2.7)
-\psline(0,0)(6.4,0)
-\uput[u](8.6,1.9){B}\uput[d](8.6,0){D}
-\uput[ur](6.35,2.7){A}\uput[d](6.35,0){E}
-\uput[d](13.9,0){C}
-\rput(14.5,3.5){Données :}
-\rput(14.5,1.9){\begin{tabular}{l}
-(AE) // (BD)\\ AE = 1,50 m\\ BD = 1,10 m\\ EC = 6 m
-\end{tabular}}
- \end{pspicture}
-\end{center} 
+\includegraphics[width=10cm,height=5cm,keepaspectratio]{../../assets/images/thales_brevet/Voiture.PNG}
+\end{center}
 
 \begin{enumerate}
 \item Calculer DC. 
@@ -204,21 +152,7 @@ La marionnette est représentée par le segment [DE].
 \end{enumerate}
 
 \begin{center}
-\psset{unit=1cm}
-\begin{pspicture}(12,5.5)
-%\psgrid
-\pspolygon(0.5,1.2)(9.5,1.2)(0.5,5)
-\psline(7.5,1.2)(7.5,2.05)
-\psframe(0.5,1.2)(0.8,1.5)\psframe(7.5,1.2)(7.8,1.5)
-\psline{<->}(0.5,0.6)(9.5,0.6)
-\uput[d](5,0.6){8 m}\uput[l](0.5,3.1){1,2 m}
-\uput[l](7.5,1.65){30 cm}
-\uput[ul](0.5,5){A} \uput[dl](0.5,1.2){B} \uput[d](9.5,1.2){C} \uput[u](7.5,2.05){D} \uput[d](7.5,1.2){E}
-\psset{unit=0.6cm}
-\rput{-20}(16,1.9){\pspolygon*(0,-0.3)(0,0.3)(0.8,0.2)(2,0.2)(2,-0.2)(0.8,-0.2)} 
-\end{pspicture}
-
-Cette figure n'est pas à l'échelle.
+\includegraphics[width=10cm,height=5cm,keepaspectratio]{../../assets/images/thales_brevet/Ombre.PNG}
 \end{center}
 """
 
@@ -250,21 +184,7 @@ place le regard au niveau du sol de telle manière qu'elle voit le sommet du Cri
 La situation est modélisée ci-dessous par la figure qui n'est pas à l'échelle.
 
 \begin{center}
-\psset{unit=1cm}
-\begin{pspicture}(-1,0)(7,6)
-\psline[linewidth=1.25pt](1,1)(1,5.8)
-\psline[linewidth=1.25pt](3.4,1)(3.4,2.3)
-\psline[linestyle=dotted](1,1)(4.3,1)(1,5.8)
-\uput[r](-0.8,4.8){Cristo}
-\uput[r](-0.8,4.2){Redentor}
-\psline{->}(0,4)(1,2.9)
-\uput[l](2.4,1.7){Julien}
-\psline{->}(2.2,1.5)(3.4,1.7)
-\rput{-55}(3.9,2.){regard de Magali}
-\psline[linestyle=dashed]{<->}(1,0.5)(4.3,0.5)
-\uput[d](2.65,0.5){10~m}
-\uput[u](1,5.8){S} \uput[d](1,1){C} \uput[l](3.4,2.4){T} \uput[d](3.4,1){J} \uput[dr](4.3,1){M} 
-\end{pspicture}
+\includegraphics[width=10cm,height=5cm,keepaspectratio]{../../assets/images/thales_brevet/Christ.PNG}
 \end{center}
 
 Déterminer la hauteur SC de la statue en supposant que le monument et Julien sont
@@ -273,28 +193,7 @@ perpendiculaires au sol.
 """
 
 corrige = r"""
-Représentons de nouveau le triangle complété par  les longueurs  données dans l'énoncé.
-
-\begin{center}
-\psset{unit=1cm}
-\begin{pspicture}(-1,0)(7,6)
-\psline[linewidth=1.25pt](1,1)(1,5.8)
-\psline[linewidth=1.25pt](3.4,1)(3.4,2.3)
-\psline[linestyle=dotted](1,1)(4.3,1)(1,5.8)
-%\uput[r](-0.8,4.8){Cristo}
-%%\uput[r](-0.8,4.2){Redentor}
-%\psline{->}(0,4)(1,2.9)
-%\uput[l](2.4,1.7){Julien}
-%\psline{->}(2.2,1.5)(3.4,1.7)
-%\rput{-55}(3.9,2.){regard de Magali}
-\psline[linestyle=dashed]{<->}(1,0.5)(3.4,0.5)
-\psline[linestyle=dashed]{<->}(3.4,0.5)(4.3,0.5)
-\uput[d](3.85,0.5){0,5~m}
-\uput[d](2.2,0.5){9,5~m}
-\uput[u](1,5.8){S} \uput[d](1,1){C} \uput[l](3.4,2.4){T} \uput[d](3.4,1){J} \uput[dr](4.3,1){M}
-\uput[l](3.4,1.7){1,90~m} 
-\end{pspicture}
-\end{center} 
+L'énoncé nous donne que MJ = 0.5~m
 
 Pour déterminer la longueur de la hauteur [SC], il faut utiliser le théorème de Thalès. Cependant, avant de s'engager dans sa formulation, nous devons vérifier que les droites (SC) et (TJ) sont parallèles, condition à l'utilisation du théorème.
 

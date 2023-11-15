@@ -4,6 +4,7 @@ nombre_genere: 15
 template_body: assets/template/basetemplate.tex
 headers:
   - correction
+  - carreaux
 body_headers:
   - path: assets/body_parts/header_interro.tex
     date: 17 novembre 2023
