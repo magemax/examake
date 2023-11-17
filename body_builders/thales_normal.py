@@ -51,10 +51,24 @@ def generer_elements(typ=0): #typ=0 pour direct, sinon 1
     
     picture_elements=[]
 
+    pc={}
+    #Check la taille initiale sans scale
+    pc["O"] = point_intersection
+    diram= angle_to_direction(angle_1)
+    pc["A"] = translate(pc["O"], diram, float(dists["OA"]))
+    pc["M"] = translate(pc["O"], diram, float(dists["OM"]))
+    dirbn=angle_to_direction(angle_2)
+    pc["B"] = translate(pc["O"], dirbn, float(dists["OB"]))
+    pc["N"] = translate(pc["O"], dirbn, float(dists["ON"]))
+
+    hauteur = max([v[0] for v in pc.values()])-min([v[0] for v in pc.values()])
+    largeur = max([v[1] for v in pc.values()])-min([v[1] for v in pc.values()])
+    
+    scale= min( (8+random()) / hauteur, (8 + random()) / largeur)
+
+
     coords={}
     
-
-
     #directions et points
     coords["O"] = point_intersection
     diram= angle_to_direction(angle_1)

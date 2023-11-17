@@ -1,0 +1,11 @@
+nom: Décomposition en facteurs premiers
+id: decomposition_premiers
+tags:
+  - Arithmétique
+  - Troisième
+headers_needed: 
+  - correction
+body: 
+  script: decomposition_premiers.py
+  arguments: 
+    template: assets/body_parts/exo_decomposition_premiers.tex

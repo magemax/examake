@@ -1,0 +1,10 @@
+nom: Thalès brevet
+id: thales_brevet
+tags:
+  - Thalès
+headers_needed:
+  - correction
+body: 
+  script: thales_brevet.py
+  arguments: 
+    template: assets/body_parts/exo_brevet.tex

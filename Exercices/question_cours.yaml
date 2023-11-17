@@ -1,0 +1,12 @@
+nom: Question de cours
+id: question_cours
+tags:
+  - Arithmétique
+  - Thalès
+  - Troisième
+headers_needed: 
+  - correction
+body: 
+  script: question_cours.py
+  arguments: 
+    template: assets/body_parts/question_cours.tex

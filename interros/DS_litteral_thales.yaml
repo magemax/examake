@@ -1,0 +1,22 @@
+nom: Interro littéral, thales
+id: ds_litteral_thales_sans_premiers
+nombre_genere: 26
+template_body: assets/template/basetemplate.tex
+headers:
+  - correction
+  - carreaux
+body_headers:
+  - path: assets/body_parts/header_interro.tex
+    date: 17 novembre 2023
+    classe: 3B
+    type: DS
+  - path: assets/body_parts/header_soin.tex #requires correction
+body_footers:
+  - path: assets/body_parts/footer_carreaux.tex
+exercices:
+  - question_cours
+  - troisieme_developpement
+  - brevet_litteral
+  - thales_random
+  - troisieme_factorisation
+  - thales_brevet

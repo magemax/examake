@@ -1,0 +1,11 @@
+nom: Développement d'expressions littérales
+id: troisieme_developpement
+tags:
+  - calcul littéral
+  - Troisième
+headers_needed: 
+  - correction
+body: 
+  script: troisieme_developpement.py
+  arguments: 
+    template: assets/body_parts/exo_troisieme_developpement.tex

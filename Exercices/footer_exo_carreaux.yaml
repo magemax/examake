@@ -1,0 +1,11 @@
+nom: Grands carreaux jusqu'à la fin de la page
+id: footer_carreaux
+tags:
+  - fonction
+  - vocabulaire
+headers_needed:
+  - carreaux
+body: 
+  script: script_inactif.py
+  arguments: 
+    template: assets/body_parts/footer_carreaux.tex

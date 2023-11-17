@@ -1,0 +1,11 @@
+nom: Liste de  diviseurs
+id: liste_diviseurs
+tags:
+  - Arithmétique
+  - Troisième
+headers_needed: 
+  - correction
+body: 
+  script: liste_diviseurs.py
+  arguments: 
+    template: assets/body_parts/exo_liste_diviseurs.tex
