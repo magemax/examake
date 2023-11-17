@@ -7,4 +7,4 @@ headers_needed:
 body: 
   script: thales_brevet.py
   arguments: 
-    template: assets/body_parts/exo_thales_brevet.tex
+    template: assets/body_parts/exo_brevet.tex
