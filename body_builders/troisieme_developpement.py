@@ -84,7 +84,7 @@ def generer_elements():
     d={}
     d["questions"] =r"\item "+ f"\n \\item ".join(["$"+lettres[k]+"="+ xtouse[k].question+"$" for k in range(len(xtouse))])
     d["corriges"] = r"\item "+f"\n \\item ".join(["$"+lettres[k]+"="+ xtouse[k].corrige+"$" for k in range(len(xtouse))])
-
+    d["enonce"]=r"Développer et réduire les expressions suivantes"
     return d
 
 
