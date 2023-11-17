@@ -1,0 +1,11 @@
+nom: Factorisation d'expressions littérales
+id: troisieme_factorisation
+tags:
+  - calcul littéral
+  - Troisième
+headers_needed: 
+  - correction
+body: 
+  script: troisieme_factorisation.py
+  arguments: 
+    template: assets/body_parts/exo_troisieme_developpement.tex
