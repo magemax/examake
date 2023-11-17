@@ -1,14 +1,14 @@
 nom: Interro littéral, thales
 id: ds_troisieme_littthal
-nombre_genere: 15
+nombre_genere: 30
 template_body: assets/template/basetemplate.tex
 headers:
   - correction
   - carreaux
 body_headers:
   - path: assets/body_parts/header_interro.tex
-    date: 17 novembre 2023
-    classe: 3B/3D
+    date: 16 novembre 2023
+    classe: 3D
     type: DS
   - path: assets/body_parts/header_soin.tex #requires correction
 body_footers:
