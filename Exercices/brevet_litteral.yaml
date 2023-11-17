@@ -1,0 +1,10 @@
+nom: Exo brevet calcul littéral
+id: brevet_litteral
+tags:
+  - Thalès
+headers_needed:
+  - correction
+body: 
+  script: brevet_litteral.py
+  arguments: 
+    template: assets/body_parts/exo_brevet.tex
