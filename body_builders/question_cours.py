@@ -19,9 +19,12 @@ def generer_elements():
     questions+= ["Enoncer le théorème de Thalès"]
     questions+= ["Enoncer la réciproque du théorème de Thalès"]
     questions+= ["Donner la définition de l'opposé d'un nombre $n$"]
-    questions+= ["Donner la définition d'un nombre premier"]
-    questions+= ['Que signifie "$a$ est un multiple de $b$" ?']
-    questions+= ['Que signifie "$a$ est un diviseur de $b$" ?']
+    questions+= ["D'après l'identité remarquable, quelle est la version factorisée de $a^2-b^2$ ?"]
+    questions+= ["D'après l'identité remarquable, quelle est la version factorisée de $a^2+ 2ab + b^2$ ?"]
+    questions+= ["D'après l'identité remarquable, quelle est la version factorisée de $a^2 - 2ab + b^2$ ?"]
+    #questions+= ["Donner la définition d'un nombre premier"]
+    #questions+= ['Que signifie "$a$ est un multiple de $b$" ?']
+    #questions+= ['Que signifie "$a$ est un diviseur de $b$" ?']
     d={"question" : choice(questions)}
     return d
 
