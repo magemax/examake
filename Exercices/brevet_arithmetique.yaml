@@ -1,0 +1,10 @@
+nom: Exo brevet arithmétique
+id: brevet_arithmetique
+tags:
+  - Thalès
+headers_needed:
+  - correction
+body: 
+  script: brevet_arithmetique.py
+  arguments: 
+    template: assets/body_parts/exo_brevet.tex

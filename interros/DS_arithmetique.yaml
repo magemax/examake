@@ -1,0 +1,21 @@
+nom: Interro arithmétique
+id: ds_troisieme_arithmetique
+nombre_genere: 28
+template_body: assets/template/basetemplate.tex
+headers:
+  - correction
+  - carreaux
+body_headers:
+  - path: assets/body_parts/header_interro.tex
+    date: 1 décembre 2023
+    classe: 3B
+    type: Interrogation rapide
+  - path: assets/body_parts/header_soin.tex #requires correction
+body_footers:
+  - path: assets/body_parts/footer_carreaux.tex
+  - path: assets/body_parts/footer_page_carreaux.tex
+exercices:
+  - detection_premiers
+  - liste_diviseurs
+  - decomposition_premiers
+  - brevet_arithmetique
