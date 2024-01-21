@@ -9,7 +9,7 @@ body_headers:
   - path: assets/body_parts/header_interro.tex
     date: 1 décembre 2023
     classe: 3B
-    type: Interrogation rapide
+    type: Interrogation 30 minutes
   - path: assets/body_parts/header_soin.tex #requires correction
 body_footers:
   - path: assets/body_parts/footer_carreaux.tex
