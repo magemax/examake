@@ -1,0 +1,11 @@
+nom: Tracer une mediatrice - 3 points
+id: mediatrice_3points
+tags:
+  - Médiatrice
+  - Sixième
+headers_needed:
+  - correction
+body: 
+  script: mediatrice_3points.py
+  arguments: 
+    template: assets/body_parts/exo_mediatrice_3points.tex
