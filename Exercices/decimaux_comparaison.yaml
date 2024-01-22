@@ -1,0 +1,11 @@
+nom: Comparaison de décimaux
+id: decimaux_comparaison
+tags:
+  - Nombres décimaux
+  - Sixième
+headers_needed:
+  - correction
+body: 
+  script: decimaux_comparaison.py
+  arguments: 
+    template: assets/body_parts/exo_decimaux_comparaison.tex
