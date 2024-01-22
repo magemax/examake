@@ -1,0 +1,11 @@
+nom: Ecritures de fractions décimales
+id: decimaux_tableau
+tags:
+  - Nombres décimaux
+  - Sixième
+headers_needed:
+  - correction
+body: 
+  script: decimaux_tableau.py
+  arguments: 
+    template: assets/body_parts/exo_decimaux_tableau.tex
