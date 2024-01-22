@@ -1,0 +1,18 @@
+nom: Interro décimaux, médiatrice
+id: ds_sixieme_decimaux
+nombre_genere: 30
+template_body: assets/template/basetemplate.tex
+headers:
+  - correction
+  - carreaux
+body_headers:
+  - path: assets/body_parts/header_interro.tex
+    date: 22 janvier 2024
+    classe: 6E
+    type: DS
+  - path: assets/body_parts/header_note.tex
+    size: 3cm
+exercices:
+  - decimaux_tableau
+  - decimaux_comparaison
+  - mediatrice_3points

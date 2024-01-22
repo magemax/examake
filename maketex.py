@@ -4,7 +4,7 @@ from interro_builder import build_interro
 import os
 from datetime import datetime
 
-interro_name="ds_troisieme_littthal"
+interro_name="ds_troisieme_arithmetique"
 import random
 
 
