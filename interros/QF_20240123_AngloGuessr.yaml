@@ -1,0 +1,9 @@
+nom: Angloguessr
+id: angloguessr
+nombre_genere: 1
+template_body: assets/template/beamertemplate.tex
+body_headers: []
+headers:
+  - correction
+exercices:
+  - angloguessr

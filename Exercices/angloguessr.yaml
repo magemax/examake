@@ -1,0 +1,12 @@
+nom: Deviner la mesure d'un angle dessiné
+id: angloguessr
+tags:
+  - Angles
+  - Sixième
+headers_needed:
+  - angles
+  - correction
+body: 
+  script: angloguessr.py
+  arguments: 
+    template: assets/body_parts/template_vide.tex
