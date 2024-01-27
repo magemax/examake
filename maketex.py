@@ -4,11 +4,11 @@ from interro_builder import build_interro
 import os
 from datetime import datetime
 
-interro_name="ds_troisieme_arithmetique"
+interro_name="ds_troisieme_probas"#"ds_troisieme_probas"
 import random
 
 
-random.seed(10)
+random.seed(13)
 
 filename=f'{datetime.now().strftime("%Y%m%dT%H%M%S")}_' + interro_name
 pathname=f"Outputs/{filename}/"
