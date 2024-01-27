@@ -14,7 +14,7 @@ def angle_to_direction(angle):
 def translate(point, direction, distance):
     return tuple([point[i]+float(distance)*direction[i] for i in range(2)])
 
-def generer_elements(nombre= 10):
+def generer_elements(nombre= 6):
     pictures=[]
     for i in range(nombre):
         a=(0,0)
