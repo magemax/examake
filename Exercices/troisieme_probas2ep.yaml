@@ -1,0 +1,11 @@
+nom: Probabilités, expériences à deux épreuves
+id: troisieme_probas2ep
+tags:
+  - probabilités
+  - Troisième
+headers_needed: 
+  - correction
+body: 
+  script: troisieme_probas.py
+  arguments: 
+    template: assets/body_parts/exo_generique.tex
