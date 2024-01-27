@@ -1,0 +1,11 @@
+nom: Probabilités, tableau
+id: troisieme_probas_tableau
+tags:
+  - probabilités
+  - Troisième
+headers_needed: 
+  - correction
+body: 
+  script: troisieme_probas_tableau.py
+  arguments: 
+    template: assets/body_parts/exo_generique.tex

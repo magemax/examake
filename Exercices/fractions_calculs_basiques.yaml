@@ -1,0 +1,11 @@
+nom: Calculs basiques de fraction
+id: fractions_calculs_basiques
+tags:
+  - fractions
+  - Troisième
+headers_needed: 
+  - correction
+body: 
+  script: fractions_calculs_basiques.py
+  arguments: 
+    template: assets/body_parts/exo_fractions_calculs_basiques.tex

@@ -1,0 +1,12 @@
+nom: Démonstration calcul littéral
+id: troisieme_demos_litteral
+tags:
+  - calcul littéral
+  - démonstration
+  - Troisième
+headers_needed: 
+  - correction
+body: 
+  script: troisieme_demo_calc_litteral.py
+  arguments: 
+    template: assets/body_parts/exo_generique.tex
