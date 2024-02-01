@@ -84,7 +84,7 @@ def generer_elements():
     f2=Fraction(-num2, den2)
     fres=f1-f2
     q = f"{fraction_to_latex(f1)} - {fraction_to_latex(f2)}"
-    r = f"{fraction_to_latex(f1)} + {fraction_to_latex(f2)} = {fraction_to_latex(fres)}"
+    r = f"{fraction_to_latex(f1)} - {fraction_to_latex(f2)} = {fraction_to_latex(fres)}"
     questions += ["$"+q+"$"]
     corrige += ["$"+r+"$"]
     
@@ -99,7 +99,7 @@ def generer_elements():
     fres = f1/f2
 
     q = f"\\dfrac{{{fraction_to_latex(f1)}}}{{{fraction_to_latex(f2)}}}"
-    r = f"\\dfrac{{{fraction_to_latex(f1)}}}{{{fraction_to_latex(f2)}}} = {fraction_to_latex(f1)} \\times {fraction_to_latex(Fraction(den2/num1))} = {fraction_to_latex(fres)}"
+    r = f"\\dfrac{{{fraction_to_latex(f1)}}}{{{fraction_to_latex(f2)}}} = {fraction_to_latex(f1)} \\times \\frac{{{den2}}}{{{num2}}} = {fraction_to_latex(fres)}" #
     questions += ["$"+q+"$"]
     corrige += ["$"+r+"$"]
     
@@ -119,8 +119,7 @@ def generer_elements():
     corrige += ["$"+r+"$"]
     
     listequestions = r"\item" + "\n \\item \n". join(questions)
-    listereponses = r"\item" + "\n \\item \n". join(reponses)
-    
+    listereponses = r"\item" + "\n \\item \n". join(corrige)
     
     return {"questions" : listequestions, "reponses" : listereponses}
 
