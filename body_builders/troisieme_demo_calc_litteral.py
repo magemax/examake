@@ -16,7 +16,24 @@ def generer_elements():
         \item Montrer que si $\dfrac{a+c}{b+d} = \dfrac{a}{b}$, alors $\dfrac{a}{b} = \dfrac{c}{d}$        
     \end{enumerate}
     """
-    d["full_corrige"] = "TBD"
+    d["full_corrige"] = r"""
+        D'après la propriété dans l'énoncé,  $\dfrac{a}{b} = \dfrac{c}{d}$  si et seulement si $ad=bc$.  
+        
+        $\dfrac{a}{b} = \dfrac{c}{d}$ 
+        
+        Si et seulement si $bc = ad$   (d'après la propriété de l'énoncé)
+        
+        
+        
+        Si et seulement si $ab + bc = ab + ad$  (On a ajouté ab des deux côté du signe = ) 
+    
+        
+        Si et seulement si $(a+c)b = a(b+d)$  (On factorise)
+        
+        Si et seulement si $\dfrac{a+c}{b+d} = \dfrac{a}{b}$ (d'après la propriété de l'énoncé)
+        
+        
+    """
     return d
 
 
