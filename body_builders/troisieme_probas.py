@@ -40,7 +40,7 @@ def generer_elements():
     Les 9 issues sont : (B,B) (B,A) (B,V) (A,B) (A,A) (A,V) (V,B) (V,A) (V,V) .\\
     \textbf {{b.}}  Comme le nombre de yaourts est différent d'un parfum à l'autre, Lisa n'a pas la même probabilité de choisir n'importe quel parfum. On en déduit qu'il est impossible que les issues (B,B), (A,A) et (V,V) aient la même probabilité.\\
     \textbf {{c.}}  Il y a {a} yaourts à la banane, et {tot} yaourts en tout, la probabilité que Lisa choisisse un yaourt à la banane est : ${fraction_to_latex(Fraction(a,tot))}$.\\
-    Ensuite, il reste 2 yaourts à la banane pour Victor sur un total de 12 yaourts.\\ 
+    Ensuite, il reste {a-1} yaourts à la banane pour Victor sur un total de {tot-1} yaourts.\\ 
     La probabilité qu'il choisisse à son tour et dans ces conditions ce parfum est : $\dfrac{{{a-1}}}{{{tot-1}}}={fraction_to_latex(Fraction(a-1,tot-1))}$.\\
     La probabilité de l'issue (B,B) est le produit de ces deux probabilités, donc : {fraction2epreuvessame(a,tot)}.\\
     \textbf {{d.}}  Les probabilités des issues (A,A) et (V,V) peuvent être respectivement calculées de la même façon qu'à la question c) :\\{fraction2epreuvessame(b,tot)},\\
@@ -85,15 +85,17 @@ def generer_elements():
     La probabilité de choisir une paire de chaussettes blanches est : ${fraction_to_latex(Fraction(c, t1))}$.\\
     Il y a {g} T-shirt bleus sur {t2} T-shirt possibles. La probabilité de choisir un des T-shirt bleu est : 
     ${fraction_to_latex(Fraction(g,t2))}$.\\
-    Jean-Claude a donc ${compose(c,g,t1,t2)}$.\\
+    Jean-Claude a donc une probabilité de ${compose(c,g,t1,t2)}$ de choisir un t-shirt bleu et des chaussettes bleues.\\
     
     \textbf {{c.}}  La probabilité de choisir une paire de chaussettes vertes est : ${fraction_to_latex(Fraction(b, t1))}$ et la probabilité de choisir l'un des T-shirt verts est : ${fraction_to_latex(Fraction(f, t2))}$.\\
     Donc la probabilité de choisir des chaussettes et un T-shirt verts est : ${compose(b,f,t1,t2)}$.\\
     La probabilité de choisir une paire de chaussettes noires est : ${fraction_to_latex(Fraction(d, t1))}$ et la probabilité de choisir l'un des T-shirt noirs est : ${fraction_to_latex(Fraction(h, t2))}$.\\
     Donc la probabilité de choisir des chaussettes et un T-shirt noirs est : ${compose(d,h,t1,t2)}$.\\
-    On en déduit que la probabilité de choisir des chaussettes et un T-shirt de la même couleur est :\\${fraction_to_latex(Fraction(b*f, t1*t2))} + {fraction_to_latex(Fraction(c*g, t1*t2))} + {fraction_to_latex(Fraction(d*h, t1*t2))} = {fraction_to_latex(Fraction(d*h + b*f + c*g, t1*t2))}$.\\
+    La probabilité de choisir une paire de chaussettes rouges est : ${fraction_to_latex(Fraction(a, t1))}$ et la probabilité de choisir l'un des T-shirt rouges est : ${fraction_to_latex(Fraction(e, t2))}$.\\
+    Donc la probabilité de choisir des chaussettes et un T-shirt rouges est : ${compose(a,e,t1,t2)}$.\\
+    On en déduit que la probabilité de choisir des chaussettes et un T-shirt de la même couleur est :\\${fraction_to_latex(Fraction(b*f, t1*t2))} + {fraction_to_latex(Fraction(c*g, t1*t2))} + {fraction_to_latex(Fraction(a*e, t1*t2))} + {fraction_to_latex(Fraction(d*h, t1*t2))} = {fraction_to_latex(Fraction(d*h + b*f + a*e + c*g, t1*t2))}$.\\
     \textbf {{d.}}  L'événement "choisir des chaussettes et un T-shirt de couleurs différentes" est l'événement contraire de l'événement "choisir des chaussettes et un T-shirt de même couleur".\\
-    Donc sa probabilité est : $1-{fraction_to_latex(Fraction(d*h + b*f + c*g, t1*t2))}={fraction_to_latex(Fraction(t1*t2 - (d*h + b*f + c*g), t1*t2))}$.\\ 
+    Donc sa probabilité est : $1-{fraction_to_latex(Fraction(d*h + b*f + a*e + c*g, t1*t2))}={fraction_to_latex(Fraction(t1*t2 - (d*h + b*f + a*e + c*g), t1*t2))}$.\\ 
     """
 
     qs+=[q]
