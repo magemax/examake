@@ -46,9 +46,35 @@ def generer_elements():
     Debut += r"\end{enumerate}" +"\n"
     Debut += r"\end{enumerate}" +"\n \n"
     
+
+    corrig = r"\begin{enumerate}" +"\n"
+    corrig += r"""\item 
+    
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+"""
+    corrig += fr"""
+Effectifs  & {c1[0]} & {c1[1]} & Total \\
+\hline
+"""
+    corrig+= fr" {c2[0]} & ${a}$ & ${c}$  & ${a+c}$ \\  \hline" + "\n"
+    corrig+= fr" {c2[1]} & ${b}$ & ${d}$  & ${b+d}$ \\  \hline" + "\n"
+    corrig+= fr" Total & ${a+b}$ & ${c+d}$  & ${tc}$ \\  \hline" + "\n"
+    
+    corrig+=r"""
+    \end{tabular}
+    """
+
+    corrig += fr""" Puisqu'on tire un élève de la classe au hasard, on est en situation d'équiprobabilité, donc on peut déduire les probabilités en divisant le nombre d'élève de chaque catégorie par {tc}.
+    
+    Par exemple, Si $A$ est l'événement "On tire un des élèves qui {posses[asked]}", comme il y a  {[a,b,c,d][asked]} élèves qui ont ces caractéristiques, $P(A) = \frac{{{[a,b,c,d][asked]}}}{{{tc}}}$
+    """
+    
+    corrig +=  r"\end{enumerate}"
     d={}
     d["question"] = Debut
-    d["full_corrige"] = "Pas (encore) de corrigés, faites l'exercice"
+    d["full_corrige"] =corrig
+
     return d
 
 
