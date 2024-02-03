@@ -1,0 +1,11 @@
+nom: Opérations sur nombres décimaux - addition et soustraction 
+id: addition_decimaux
+tags:
+  - decimaux
+  - Sixieme
+headers_needed: 
+  - correction
+body: 
+  script: addition_decimaux.py
+  arguments: 
+    template: assets/body_parts/exo_generique.tex
