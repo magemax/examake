@@ -1,0 +1,11 @@
+nom: Lien entre la formule et la représentation graphique, fonctions affines
+id: fonction_affines_lien_graphique
+tags:
+  - fonction
+headers_needed: 
+  - correction
+  - graphe_style
+body: 
+  script: fonction_affine_graph.py
+  arguments: 
+    template: assets/body_parts/exo_fonction_affine_graph.tex

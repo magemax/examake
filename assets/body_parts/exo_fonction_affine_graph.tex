@@ -1,0 +1,51 @@
+\begin{exo}
+    Sur le repère ci-dessous figure la droite $(d)$ représentant une fonction affine $f$. 
+
+    \begin{enumerate}
+        \item Par une lecture graphique, déterminer :
+        \begin{enumerate}
+            \item Le coefficient directeur de la droite $(d)$
+            \item L'ordonnée à l'origine de la fonction
+            \item La formule qui exprime $f(x)$ en fonction de $x$
+        \end{enumerate}
+        \item On appelle $g$ la fonction affine telle que ${w_formule_g}$.
+        \begin{enumerate}
+            \item Calculer $g(0)$ et $g(1)$
+            \item Tracer la droite $(e)$ qui représente la fonction $g$ dans le repère ci-dessous
+            \item En déduire une valeur approchée d'un nombre $a$ tel que $f(a)=g(a)$. Expliquer la méthode employée.
+        \end{enumerate}
+    \end{enumerate}
+\end{exo}
+
+
+\vspace{0.5cm}
+\begin{tikzpicture}[scale=1]
+% Repère 1
+\begin{axis}[width=\textwidth, axis lines=middle, xmin=-8.1, xmax=8.1, ymin=-8.5, ymax=8.1, xlabel={$x$}, ylabel={$y$}, 
+        grid=major,xlabel style={at={(1,0.7)}, anchor=north}, ylabel style={at={(0.5,1)}, anchor=south},
+        xtick={-7,-6,...,7},
+        ytick={-7,-6,...,7}]
+    \addplot[blue, domain=-9:9, line width = 1.5pt,samples=100] {{w_f_latex}};
+    \Texteouvide{\addplot[red, domain=-9:9, line width = 2.5pt,samples=100] {{w_g_latex}};}
+\end{axis}
+\end{tikzpicture}
+
+\vspace{0.5cm}
+
+\Texteouvide{
+    \textbf{CORRIGE :}
+    
+    \begin{enumerate}
+        \item \begin{enumerate}
+            \item {w_rep1a}
+            \item {w_rep1b}
+            \item {w_rep1c}
+        \end{enumerate}
+        \item On appelle $g$ la fonction affine telle que ${w_formule_g}$.
+        \begin{enumerate}
+            \item {w_rep2a}
+            \item {w_rep2b}
+            \item {w_rep2c}
+        \end{enumerate}
+    \end{enumerate}
+}
