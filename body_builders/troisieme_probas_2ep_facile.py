@@ -58,9 +58,9 @@ def generer_elements():
 
     a,b,c,d,e,f,g,h = [0]*8
     while a+b+c+d not in primelist:
-        a,b,c = [randint(1,6) for i in range(4)]
+        a,b,c = [randint(1,6) for i in range(3)]
     while e+f+g+h not in primelist or e+f+g+h == a+b+c+d:
-        e,f,g = [randint(1,6) for i in range(4)]
+        e,f,g = [randint(1,6) for i in range(3)]
 
     t1=a+b+c
     t2 = e+f+g
