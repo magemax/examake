@@ -14,16 +14,23 @@ def angle_to_direction(angle):
 def translate(point, direction, distance):
     return tuple([point[i]+float(distance)*direction[i] for i in range(2)])
 
+
+def angle_random(): #Renvoie trois points du ABC, tels que l'angle ABC vaille un nombre entier
+# de degrés entre 1 et 179
+    a=(0,0)
+    rangle=random()*pi
+    b=angle_to_direction(rangle)
+    aangle2=randint(1,179)
+    rangle2=pi/180 * aangle2
+    c=angle_to_direction(rangle+rangle2)
+    return a,b,c, aangle2
+
+
 def generer_elements(nombre= 6):
     pictures=[]
     for i in range(nombre):
-        a=(0,0)
-        rangle=random()*pi
-        b=angle_to_direction(rangle)
-        aangle2=randint(1,179)
-        rangle2=pi/180 * aangle2
-        c=angle_to_direction(rangle+rangle2)
         coords={}
+        a,b,c, aangle2 = angle_random()
         for k in range(3):
             coords["ABC"[k]]=[a,b,c][k]
         contenupicture = []
