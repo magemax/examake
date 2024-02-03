@@ -1,0 +1,12 @@
+nom: Mesurer un angle
+id: jeu_des_angles_controle
+tags:
+  - Angles
+  - Sixième
+headers_needed:
+  - angles
+  - correction
+body: 
+  script: jeu_des_angles.py
+  arguments: 
+    template: assets/body_parts/exo_jeudesangles.tex

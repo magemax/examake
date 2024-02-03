@@ -1,0 +1,19 @@
+nom: Interro Angles, opérations sur décimaux 1
+id: ds_sixieme_angles
+nombre_genere: 30
+template_body: assets/template/basetemplate.tex
+headers:
+  - correction
+  - carreaux
+body_headers:
+  - path: assets/body_parts/header_interro.tex
+    date: 22 janvier 2024
+    classe: 6E
+    type: DS
+  - path: assets/body_parts/header_note.tex
+    size: 3cm
+exercices:
+  - mesurer_angles
+  - tracer_angles
+  - addition_decimaux
+  - produit_entier_decimal

@@ -1,0 +1,12 @@
+nom: Tracer un angle
+id: tracer_angles
+tags:
+  - Angles
+  - Sixième
+headers_needed:
+  - angles
+  - correction
+body: 
+  script: tracer_angles.py
+  arguments: 
+    template: assets/body_parts/exo_tracer_angles.tex

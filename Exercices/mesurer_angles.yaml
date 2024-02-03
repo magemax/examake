@@ -1,0 +1,12 @@
+nom: Deviner la mesure d'un angle dessiné
+id: mesurer_angles
+tags:
+  - Angles
+  - Sixième
+headers_needed:
+  - angles
+  - correction
+body: 
+  script: mesurer_angles.py
+  arguments: 
+    template: assets/body_parts/mesurer_angles.tex

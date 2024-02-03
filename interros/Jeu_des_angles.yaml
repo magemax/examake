@@ -1,0 +1,13 @@
+nom: Jeu des angles - interro
+id: jeu_des_angles
+nombre_genere: 30
+template_body: assets/template/basetemplate.tex
+headers:
+  - correction
+body_headers:
+  - path: assets/body_parts/header_interro.tex
+    date: 5 février 2024
+    classe: 6E
+    type: Interrogation rapide
+exercices:
+  - jeu_des_angles_controle
