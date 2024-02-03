@@ -1,0 +1,22 @@
+nom: Interro fractions, probas
+id: ds_troisieme_probas_fonctions
+nombre_genere: 28
+template_body: assets/template/basetemplate.tex
+headers:
+  - correction
+  - carreaux
+body_headers:
+  - path: assets/body_parts/header_interro.tex
+    date: 7 février 2024
+    classe: 3B
+    type: DS
+  - path: assets/body_parts/header_soin.tex #requires correction
+body_footers:
+  - path: assets/body_parts/footer_carreaux.tex
+  - path: assets/body_parts/footer_page_carreaux.tex
+exercices:
+  - question_cours
+  - fractions_calculs_basiques
+  - troisieme_probas_tableau
+  - troisieme_probas2ep_facile
+  - fonction_affines_lien_graphique
