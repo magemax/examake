@@ -13,7 +13,6 @@ body_headers:
   - path: assets/body_parts/header_soin.tex #requires correction
 body_footers:
   - path: assets/body_parts/footer_carreaux.tex
-  - path: assets/body_parts/footer_page_carreaux.tex
 exercices:
   - question_cours
   - fractions_calculs_basiques
